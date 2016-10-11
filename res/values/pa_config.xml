@@ -19,4 +19,7 @@
          a fixed set of led colors -->
     <bool name="config_has_multi_color_led">true</bool>
 
+    <!-- Phone info shortcut -->
+    <string name="device_info_title">Phone info</string>
+
 </resources>
