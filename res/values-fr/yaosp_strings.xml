@@ -258,6 +258,9 @@
     <string name="use_slim_recents_title">Utiliser Slim Recents</string>
     <string name="use_slim_recents_summary">Utiliser Slim Recents au lieu du gestionnaire de tâches normal</string>
     <string name="show_running_tasks_title">N\'afficher que les application en cours d\'exécution</string>
+    <string name="slim_recents_last_app_title">Passer à l\'application précédante en quittant Slim Recents avec la touche Recents</string>
+    <string name="slim_recents_last_app_summary_on">Passer à l\'application précédante en quittant Slim Recents avec la touche Recents</string>
+    <string name="slim_recents_last_app_summary_off">Rester sur l\'application actuelle en quittant Slim Recents avec la touche Recents</string>
     <string name="recents_max_apps_title">Nombre maximum d\'applications autorisées</string>
     <string name="recent_panel_scale_title">Taille</string>
     <string name="recent_panel_expanded_mode_title">Mode étendu</string>
