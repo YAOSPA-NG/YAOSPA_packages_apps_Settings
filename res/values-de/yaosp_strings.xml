@@ -258,6 +258,9 @@
     <string name="use_slim_recents_title">Slim Recents verwenden</string>
     <string name="use_slim_recents_summary">Slim Recents an Stelle des normales Recents verwenden</string>
     <string name="show_running_tasks_title">Nur laufende Apps anzeigen</string>
+    <string name="slim_recents_last_app_title">Vorige App beim Slim Recents verlassen mit der Recents Taste</string>
+    <string name="slim_recents_last_app_summary_on">Auf die vorige App wechseln wenn Slim Recents mit der Recents Taste verlassen wird</string>
+    <string name="slim_recents_last_app_summary_off">Auf der aktuelle App bleiben wenn Slim Recents mit der Recents Taste verlassen wird</string>
     <string name="recents_max_apps_title">Maximal erlaubte Apps</string>
     <string name="recent_panel_scale_title">Größe</string>
     <string name="recent_panel_expanded_mode_title">Erweiterter Modus</string>
