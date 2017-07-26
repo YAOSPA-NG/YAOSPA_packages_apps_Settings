@@ -27,6 +27,14 @@
             android:dependency="use_slim_recents"
             android:defaultValue="false" />
 
+        <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="slim_recents_last_app"
+            android:title="@string/slim_recents_last_app_title"
+            android:summaryOn="@string/slim_recents_last_app_summary_on"
+            android:summaryOff="@string/slim_recents_last_app_summary_off"
+            android:dependency="use_slim_recents"
+            android:defaultValue="true" />
+
         <com.android.settings.preferences.CustomSeekBarPreference
             android:key="recents_max_apps"
             android:title="@string/recents_max_apps_title"
