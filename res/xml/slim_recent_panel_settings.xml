@@ -30,8 +30,8 @@
         <com.android.settings.preferences.CustomSeekBarPreference
             android:key="recents_max_apps"
             android:title="@string/recents_max_apps_title"
-            settings:min="5"
-            android:max="105"
+            settings:minimum="5"
+            settings:maximum="105"
             android:dependency="use_slim_recents"
             android:persistent="false" />
 
@@ -60,8 +60,8 @@
         <com.android.settings.preferences.CustomSeekBarPreference
             android:key="recent_panel_scale"
             android:title="@string/recent_panel_scale_title"
-            settings:min="60"
-            android:max="160"
+            settings:minimum="60"
+            settings:maximum="200"
             settings:interval="5"
             settings:units="%"
             android:dependency="use_slim_recents"
