@@ -84,6 +84,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_MOD_BUILD_DATE = "build_date";
     private static final String KEY_DEVICE_CPU = "device_cpu";
     private static final String KEY_DEVICE_MEMORY = "device_memory";
+    private static final String KEY_YAOSP_VERSION = "yaosp_version";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -116,6 +117,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
 
         addPreferencesFromResource(R.xml.device_info_settings);
 
+        setYAOSPSummary();
         setStringSummary(KEY_FIRMWARE_VERSION, Build.VERSION.RELEASE);
         findPreference(KEY_FIRMWARE_VERSION).setEnabled(true);
 
@@ -475,6 +477,32 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
             findPreference(preference).setSummary(
                     SystemProperties.get(property,
                             getResources().getString(R.string.device_info_default)));
+        } catch (RuntimeException e) {
+            // No recovery
+        }
+    }
+
+    private void setYAOSPSummary() {
+        final String mYaospVersion;
+        final String mYaospBranch;
+        final String mYaospBuildBase;
+        final String mYaospBuildDate;
+        final String mYaospBuilderInfo;
+        try {
+            mYaospVersion     = SystemProperties.get("ro.yaosp.version", "");
+            mYaospBranch      = SystemProperties.get("ro.yaosp.branch", "");
+            mYaospBuildBase   = SystemProperties.get("ro.yaosp.buildbase", "");
+            mYaospBuildDate   = SystemProperties.get("ro.yaosp.builddate", "");
+            mYaospBuilderInfo = getResources().getString(R.string.yaosp_version_default);
+            if (mYaospVersion != "" && mYaospBuildBase != "" && mYaospBuildDate != ""
+                    && mYaospBranch != "") {
+                findPreference(KEY_YAOSP_VERSION).setSummary(
+                        mYaospBranch
+                        + " "    + mYaospBuildBase
+                        + " - v" + mYaospVersion
+                        + " "    + mYaospBuildDate
+                        + "\n"   + mYaospBuilderInfo);
+            }
         } catch (RuntimeException e) {
             // No recovery
         }
