@@ -19,4 +19,8 @@
     <string name="cpu_info">Prozessor</string>
     <string name="mem_info">Speicher</string>
 
+    <!-- ADB debugging notifications -->
+    <string name="adb_notify">Benachrichtigung bei USB-Debugging</string>
+    <string name="adb_notify_summary">Eine Benachrichtigung anzeigen, wenn USB- order Netzwerk-Debugging verbunden ist</string>
+
 </resources>
