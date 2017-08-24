@@ -33,4 +33,8 @@
     <string name="adb_over_network_summary">Enable TCP/IP debugging over network interfaces (Wi\u2011Fi, USB networks). This setting is reset on reboot.</string>
     <string name="adb_over_network_warning">WARNING: When ADB over network is enabled, your phone is open for intrusions on all connected networks!\n\nOnly use this feature when you are connected on trusted networks.\n\nDo you really want to enable this function?</string>
 
+    <!-- Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+    <string name="unlock_quick_unlock_control_summary">Automatically unlock as soon as the correct PIN has been entered (pressing OK not required)\nNote: will only work for 4 digit PIN !</string>
+
 </resources>
