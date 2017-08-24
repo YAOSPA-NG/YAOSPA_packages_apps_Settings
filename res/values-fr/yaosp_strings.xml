@@ -19,4 +19,8 @@
     <string name="cpu_info">Processeur</string>
     <string name="mem_info">Mémoire vive</string>
 
+    <!-- ADB debugging notifications -->
+    <string name="adb_notify">Notification de débogage USB</string>
+    <string name="adb_notify_summary">Afficher une notification lorsque le débogage USB ou réseau est actif</string>
+
 </resources>
