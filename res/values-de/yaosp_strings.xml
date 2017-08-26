@@ -33,5 +33,7 @@
     <!-- Double-tap to sleep -->
     <string name="double_tap_sleep_anywhere_title">Sperrbildschirm Doppelt Tippen für Schlafmodus</string>
     <string name="double_tap_sleep_anywhere_summary">Sperrbildschirm zweimal antippen, um das Gerät in den Standby-Modus zu versetzen</string>
+    <string name="double_tap_sleep_nav_bar_title">Navigationsleiste Doppelt Tippen für Schlafmodus</string>
+    <string name="double_tap_sleep_nav_bar_summary">Navigationsleiste zweimal antippen, um das Gerät in den Standby-Modus zu versetzen</string>
 
 </resources>
