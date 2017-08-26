@@ -49,7 +49,7 @@
   <string name="night_display_hide">Diese Warnung nicht anzeigen</string>
   <string name="night_display_ok">Ok</string>
   <!-- Statusbar - double-tap to sleep -->
-  <string name="double_tap_to_sleep_title">Doppelt Tippen für Schlafmodus</string>
+  <string name="double_tap_to_sleep_title">Statusleiste Doppelt Tippen für Schlafmodus</string>
   <string name="double_tap_to_sleep_summary">Statusleiste zweimal antippen, um das Gerät in den Standby-Modus zu versetzen</string>
   <!-- Gestures Settings -->
   <string name="gestures_settings_title">Gesten</string>
