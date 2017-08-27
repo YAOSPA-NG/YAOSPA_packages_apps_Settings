@@ -109,6 +109,12 @@
     <!--string name="doze_trigger_doubletap_title">Déclenchement par double appui</string-->
     <!--string name="doze_trigger_doubletap_summary_on">L\'impulsion sera déclenchée par la détection d\'un double appui sur l\'écran</string-->
     <!--string name="doze_trigger_doubletap_summary_off">L\'impulsion ne sera pas déclenchée par la détection d\'un double appui sur l\'écran (défaut)</string-->
+    <string name="doze_trigger_hand_wave_title">Déclenchement par signe de la main</string>
+    <string name="doze_trigger_hand_wave_summary_on">L\'impulsion sera déclenchée par la détection d\'un mouvement de la main au dessus de l\'appareil (défaut)</string>
+    <string name="doze_trigger_hand_wave_summary_off">L\'impulsion ne sera pas déclenchée par la détection d\'un mouvement de la main au dessus de l\'appareil</string>
+    <string name="doze_trigger_pocket_title">Déclenchement en sortant de la poche</string>
+    <string name="doze_trigger_pocket_summary_on">L\'impulsion sera déclenchée en sortant l\'appareil de la poche (défaut)</string>
+    <string name="doze_trigger_pocket_summary_off">L\'impulsion ne sera pas déclenchée en sortant l\'appareil de la poche</string>
     <string name="doze_trigger_notification_title">Déclenchement par une notification</string>
     <string name="doze_trigger_notification_summary_on">L\'impulsion sera déclenchée par les notifications (défaut)</string>
     <string name="doze_trigger_notification_summary_off">L\'impulsion ne sera pas déclenchée par les notifications</string>
