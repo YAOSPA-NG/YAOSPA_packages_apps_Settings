@@ -102,8 +102,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_FONT_SIZE = "font_size";
     private static final String KEY_FONT_SIZE_MODE = "font_size_mode";
     private static final String KEY_SCREEN_SAVER = "screensaver";
-    private static final String KEY_LIFT_TO_WAKE = "lift_to_wake";
-    private static final String KEY_DOZE = "doze";
     private static final String KEY_TAP_TO_WAKE = "tap_to_wake";
     private static final String KEY_POCKET_JUDGE = "pocket_judge";
     private static final String KEY_SRGB = "srgb";
@@ -136,11 +134,14 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private ScreenZoomPreference mScreenZoomPref;
     private WarnedPreference mDialogPref;
 
+    private static final String KEY_DOZE_CATEGORY = "category_doze_options";
+    private static final String KEY_DOZE = "doze";
+    private static final String KEY_ADVANCED_DOZE_OPTIONS = "advanced_doze_options";
+
     private TimeoutListPreference mScreenTimeoutPreference;
     private ListPreference mNightModePreference;
     private Preference mScreenSaverPreference;
     private SwitchPreference mLiftToWakePreference;
-    private SwitchPreference mDozePreference;
     private SwitchPreference mPocketPreference;
     private SwitchPreference mSrgbPreference;
     private SwitchPreference mAutoBrightnessPreference;
@@ -157,6 +158,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private PreferenceCategory mLedsCategory;
     private Preference mChargingLeds;
     private Preference mNotificationLeds;
+
+    private PreferenceCategory mDozeCategory;
+    private SwitchPreference mDozePreference;
+    private PreferenceScreen mAdvancedDozeOptions;
 
     @Override
     protected int getMetricsCategory() {
@@ -191,6 +196,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (mChargingLeds == null && mNotificationLeds == null) {
             getPreferenceScreen().removePreference(mLedsCategory);
         }
+
+        PreferenceScreen prefSet = getPreferenceScreen();
 
         mScreenSaverPreference = findPreference(KEY_SCREEN_SAVER);
         if (mScreenSaverPreference != null
@@ -232,18 +239,13 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             removePreference(KEY_NIGHT_DISPLAY);
         }
 
-        if (isLiftToWakeAvailable(activity)) {
-            mLiftToWakePreference = (SwitchPreference) findPreference(KEY_LIFT_TO_WAKE);
-            mLiftToWakePreference.setOnPreferenceChangeListener(this);
-        } else {
-            removePreference(KEY_LIFT_TO_WAKE);
-        }
-
+        mDozeCategory = (PreferenceCategory) findPreference(KEY_DOZE_CATEGORY);
         if (isDozeAvailable(activity)) {
+            // Doze master switch
             mDozePreference = (SwitchPreference) findPreference(KEY_DOZE);
             mDozePreference.setOnPreferenceChangeListener(this);
         } else {
-            removePreference(KEY_DOZE);
+            prefSet.removePreference(mDozeCategory);
         }
 
         mPocketPreference = (SwitchPreference) findPreference(KEY_POCKET_JUDGE);
@@ -378,11 +380,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static boolean allowAllRotations(Context context) {
         return Resources.getSystem().getBoolean(
                 com.android.internal.R.bool.config_allowAllRotations);
-    }
-
-    private static boolean isLiftToWakeAvailable(Context context) {
-        SensorManager sensors = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);
-        return sensors != null && sensors.getDefaultSensor(Sensor.TYPE_WAKE_GESTURE) != null;
     }
 
     private static boolean isDozeAvailable(Context context) {
@@ -787,11 +784,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     if (!NightDisplayController.isAvailable(context)) {
                         result.add(KEY_NIGHT_DISPLAY);
                     }
-                    if (!isLiftToWakeAvailable(context)) {
-                        result.add(KEY_LIFT_TO_WAKE);
-                    }
                     if (!isDozeAvailable(context)) {
                         result.add(KEY_DOZE);
+                        result.add(KEY_ADVANCED_DOZE_OPTIONS);
                     }
                     if (!isSrgbAvailable(context)) {
                         result.add(KEY_SRGB);
