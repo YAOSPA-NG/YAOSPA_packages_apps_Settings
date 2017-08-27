@@ -70,10 +70,8 @@ public class GesturesSettings extends SettingsPreferenceFragment implements
 
     private static final String KEY_DOUBLE_TAP_POWER = "gesture_double_tap_power";
     private static final String KEY_DOUBLE_TWIST = "gesture_double_twist";
-    private static final String KEY_PICK_UP = "gesture_pick_up";
     private static final String KEY_SWIPE_DOWN_FINGERPRINT = "gesture_swipe_down_fingerprint";
     private static final String KEY_DOUBLE_TAP_SLEEP = "gesture_double_tap_sleep";
-    private static final String KEY_DOUBLE_TAP_SCREEN = "gesture_double_tap_screen";
     private static final String KEY_THREE_FINGER_SCREENSHOT = "gesture_three_finger_screenshot";
     private static final String DEBUG_DOZE_COMPONENT = "debug.doze.component";
 
@@ -174,21 +172,6 @@ public class GesturesSettings extends SettingsPreferenceFragment implements
                 Settings.Secure.THREE_FINGER_SCREENSHOT_ENABLED, 0,
                 UserHandle.USER_CURRENT);
         addPreference(KEY_THREE_FINGER_SCREENSHOT, threeFingerScreenshot != 0);
-
-        // Ambient Display
-        mAmbientConfig = new AmbientDisplayConfiguration(context);
-        if (mAmbientConfig.pulseOnPickupAvailable()) {
-            boolean pickup = mAmbientConfig.pulseOnPickupEnabled(UserHandle.myUserId());
-            addPreference(KEY_PICK_UP, pickup);
-        } else {
-            mSystemGestures.removePreference(findPreference(KEY_PICK_UP));
-        }
-        if (mAmbientConfig.pulseOnDoubleTapAvailable()) {
-            boolean doubleTap = mAmbientConfig.pulseOnDoubleTapEnabled(UserHandle.myUserId());
-            addPreference(KEY_DOUBLE_TAP_SCREEN, doubleTap);
-        } else {
-            mSystemGestures.removePreference(findPreference(KEY_DOUBLE_TAP_SCREEN));
-        }
 
         // Fingerprint slide for notifications
         if (isSystemUINavigationAvailable(context)) {
@@ -323,14 +306,14 @@ public class GesturesSettings extends SettingsPreferenceFragment implements
             boolean enabled = (boolean) newValue;
             Settings.System.putInt(getContentResolver(), Settings.System.GESTURE_DOUBLE_TAP_SLEEP,
                     enabled ? 1 : 0);
-        } else if (KEY_PICK_UP.equals(key)) {
-            boolean enabled = (boolean) newValue;
-            Settings.Secure.putInt(getContentResolver(), Settings.Secure.DOZE_PULSE_ON_PICK_UP,
-                    enabled ? 1 : 0);
-        } else if (KEY_DOUBLE_TAP_SCREEN.equals(key)) {
-            boolean enabled = (boolean) newValue;
-            Settings.Secure.putInt(getContentResolver(), Settings.Secure.DOZE_PULSE_ON_DOUBLE_TAP,
-                    enabled ? 1 : 0);
+//        } else if (KEY_PICK_UP.equals(key)) {
+//            boolean enabled = (boolean) newValue;
+//            Settings.Secure.putInt(getContentResolver(), Settings.Secure.DOZE_PULSE_ON_PICK_UP,
+//                    enabled ? 1 : 0);
+//        } else if (KEY_DOUBLE_TAP_SCREEN.equals(key)) {
+//            boolean enabled = (boolean) newValue;
+//            Settings.Secure.putInt(getContentResolver(), Settings.Secure.DOZE_PULSE_ON_DOUBLE_TAP,
+//                    enabled ? 1 : 0);
         } else if (KEY_SWIPE_DOWN_FINGERPRINT.equals(key)) {
             boolean enabled = (boolean) newValue;
             Settings.Secure.putInt(getContentResolver(),
