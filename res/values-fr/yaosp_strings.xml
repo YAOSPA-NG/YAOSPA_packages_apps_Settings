@@ -100,6 +100,9 @@
     <string name="doze_trigger_pickup_title">Déclenchement par détection de geste</string>
     <string name="doze_trigger_pickup_summary_on">L\'impulsion sera déclenchée par la détection d\'un mouvement de l\'appareil (défaut)</string>
     <string name="doze_trigger_pickup_summary_off">L\'impulsion ne sera pas déclenchée par la détection d\'un mouvement de l\'appareil</string>
+    <string name="doze_trigger_tilt_title">Déclenchement par détection d\'inclinaison</string>
+    <string name="doze_trigger_tilt_summary_on">L\'impulsion sera déclenchée par la détection d\'un mouvement d\'inclinaison de l\'appareil (défaut)</string>
+    <string name="doze_trigger_tilt_summary_off">L\'impulsion ne sera pas déclenchée par la détection d\'un mouvement d\'inclinaison de l\'appareil</string>
     <string name="doze_trigger_sigmotion_title">Déclenchement par mouvement important</string>
     <string name="doze_trigger_sigmotion_summary_on">L\'impulsion sera déclenchée par des mouvements importants (défaut)</string>
     <string name="doze_trigger_sigmotion_summary_off">L\'impulsion ne sera pas déclenchée par des mouvements importants</string>
