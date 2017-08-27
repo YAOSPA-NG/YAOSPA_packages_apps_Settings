@@ -100,6 +100,9 @@
     <string name="doze_trigger_pickup_title">Auslösen durch Aufheben des Gerätes</string>
     <string name="doze_trigger_pickup_summary_on">Aufheben wird als Auslöser genutzt (Standard)</string>
     <string name="doze_trigger_pickup_summary_off">Aufheben wird nicht als Auslöser genutzt</string>
+    <string name="doze_trigger_tilt_title">Auslösen durch Neigung des Gerätes</string>
+    <string name="doze_trigger_tilt_summary_on">Neigen wird als Auslöser genutzt (Standard)</string>
+    <string name="doze_trigger_tilt_summary_off">Neigen wird nicht als Auslöser genutzt</string>
     <string name="doze_trigger_sigmotion_title">Auslösen durch eine deutliche Bewegung</string>
     <string name="doze_trigger_sigmotion_summary_on">Eine deutliche Bewegung wird als Auslöser genutzt (Standard)</string>
     <string name="doze_trigger_sigmotion_summary_off">Eine deutliche Bewegung wird nicht als Auslöser genutzt</string>
