@@ -109,6 +109,12 @@
     <!--string name="doze_trigger_doubletap_title">Auslösen durch doppeltes Antippen</string-->
     <!--string name="doze_trigger_doubletap_summary_on">Eine doppeltes Antippen wird als Auslöser genutzt</string-->
     <!--string name="doze_trigger_doubletap_summary_off">Eine doppeltes Antippen wird als Auslöser genutzt (Standard)</string-->
+    <string name="doze_trigger_hand_wave_title">Auslösen durch Winken mit der Hand</string>
+    <string name="doze_trigger_hand_wave_summary_on">Winken mit der Hand wird als Auslöser genutzt (Standard)</string>
+    <string name="doze_trigger_hand_wave_summary_off">Winken mit der Hand wird nicht als Auslöser genutzt</string>
+    <string name="doze_trigger_pocket_title">Auslösen beim Gerät aus der Tasche nehmen</string>
+    <string name="doze_trigger_pocket_summary_on">Gerät aus der Tasche nehmen wird als Auslöser genutzt (Standard)</string>
+    <string name="doze_trigger_pocket_summary_off">Gerät aus der Tasche nehmen wird nicht als Auslöser genutzt</string>
     <string name="doze_trigger_notification_title">Auslösen durch eine Benachrichtigung</string>
     <string name="doze_trigger_notification_summary_on">Benachrichtigung wird als Auslöser genutzt (Standard)</string>
     <string name="doze_trigger_notification_summary_off">Benachrichtigung wird nicht als Auslöser genutzt</string>
