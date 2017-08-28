@@ -120,6 +120,7 @@
     <string name="action_last_app">Launch last app</string>
     <string name="action_splitscreen">Splitscreen</string>
     <string name="action_screen_off">Turn off screen</string>
+    <string name="action_kill_app">Kill foreground app</string>
 
     <!-- Screenshot shutter sound -->
     <string name="screenshot_shutter_sound_title">Screenshot shutter sound</string>

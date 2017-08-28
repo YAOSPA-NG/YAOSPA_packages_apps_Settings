@@ -109,6 +109,7 @@
   <string name="action_last_app">Lancer la dernière application</string>
   <string name="action_splitscreen">Écran partagé</string>
   <string name="action_screen_off">Éteindre l\'écran</string>
+  <string name="action_kill_app">Arréter l\'application en avant plan</string>
   <!-- Screenshot shutter sound -->
   <string name="screenshot_shutter_sound_title">Bruit de la capture d\'écran</string>
   <!-- Heads-up notifications -->
