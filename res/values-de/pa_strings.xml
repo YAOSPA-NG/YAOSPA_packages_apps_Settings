@@ -111,6 +111,8 @@
   <string name="action_splitscreen">Geteilter Bildschirm</string>
   <string name="action_screen_off">Bildschirm ausschalten</string>
   <string name="action_kill_app">Vordergrund App schließen</string>
+  <string name="action_notifications">Benachrichtigungen öffnen</string>
+  <string name="action_QS_panel">Schnelleinstellungen öffnen</string>
   <!-- Screenshot shutter sound -->
   <string name="screenshot_shutter_sound_title">Screenshot Auslöserton</string>
   <!-- Heads-up notifications -->
