@@ -79,6 +79,7 @@
   <string name="gestures_previous_music">Vorheriger Titel</string>
   <string name="gestures_open_camera">Kamera öffnen</string>
   <string name="gestures_open_dialer">Telefon-App öffnen</string>
+  <string name="gestures_doze_pulse">Doze</string>
   <!-- Buttons -->
   <string name="buttons_pref_title">Schaltflächen</string>
   <string name="buttons_pref_summary">Passen Sie Ihre Gerätetasten und -knöpfe an</string>
