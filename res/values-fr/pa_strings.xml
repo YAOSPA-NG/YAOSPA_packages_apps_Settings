@@ -111,6 +111,8 @@
   <string name="action_splitscreen">Écran partagé</string>
   <string name="action_screen_off">Éteindre l\'écran</string>
   <string name="action_kill_app">Arréter l\'application en avant plan</string>
+  <string name="action_notifications">Ouvrir les notifications</string>
+  <string name="action_QS_panel">Ouvrir le panneau des paramètres rapide</string>
   <!-- Screenshot shutter sound -->
   <string name="screenshot_shutter_sound_title">Bruit de la capture d\'écran</string>
   <!-- Heads-up notifications -->

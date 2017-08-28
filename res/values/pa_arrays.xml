@@ -56,6 +56,8 @@
         <item>@string/action_splitscreen</item>
         <item>@string/action_screen_off</item>
         <item>@string/action_kill_app</item>
+        <item>@string/action_notifications</item>
+        <item>@string/action_QS_panel</item>
     </string-array>
 
     <string-array name="action_values" translatable="false">
@@ -70,6 +72,8 @@
         <item>8</item>
         <item>9</item>
         <item>1000</item>
+        <item>1001</item>
+        <item>1002</item>
     </string-array>
 
     <!-- Gestures Settings -->
