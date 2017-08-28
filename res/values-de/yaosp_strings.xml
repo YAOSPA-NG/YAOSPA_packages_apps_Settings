@@ -214,4 +214,9 @@
     <string name="lockscreen_battery_info_title">Ladeinfo im Sperrbildschirm</string>
     <string name="lockscreen_battery_info_summary">Höchstladestrom, Höchstladespannung und Akkutemperatur im Sperrbildschirm wärend des Ladevorgangs anzeigen</string>
 
+    <!-- Increasing ring tone volume -->
+    <string name="increasing_ring_volume_option_title">Zunehmende Ruftonlautstärke</string>
+    <string name="increasing_ring_min_volume_title">Start Lautstärke</string>
+    <string name="increasing_ring_ramp_up_time_title">Zunehmende Lautstärke Zeit</string>
+
 </resources>
