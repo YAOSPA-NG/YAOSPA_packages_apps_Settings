@@ -109,6 +109,7 @@
   <string name="action_last_app">Letzte App starten</string>
   <string name="action_splitscreen">Geteilter Bildschirm</string>
   <string name="action_screen_off">Bildschirm ausschalten</string>
+  <string name="action_kill_app">Vordergrund App schließen</string>
   <!-- Screenshot shutter sound -->
   <string name="screenshot_shutter_sound_title">Screenshot Auslöserton</string>
   <!-- Heads-up notifications -->
