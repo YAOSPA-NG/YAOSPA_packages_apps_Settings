@@ -214,4 +214,9 @@
     <string name="lockscreen_battery_info_title">Information de charge dans l\'écran de vérouillage</string>
     <string name="lockscreen_battery_info_summary">Afficher courant et tension maximum négociés ainsi que la température de la batterie dans l\'écran de vérouillage quand la batterie est en charge</string>
 
+    <!-- Increasing ring tone volume -->
+    <string name="increasing_ring_volume_option_title">Sonnerie progressive</string>
+    <string name="increasing_ring_min_volume_title">Volume de départ</string>
+    <string name="increasing_ring_ramp_up_time_title">Durée de progression</string>
+
 </resources>
