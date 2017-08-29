@@ -244,4 +244,9 @@
     <string name="lockscreen_pin_ripple_summary_on">Ripple bei der Eingabe von PIN anzeigen (Standard)</string>
     <string name="lockscreen_pin_ripple_summary_off">Ripple bei der Eingabe von PIN verstecken</string>
 
+    <!-- Show brightness slider in QS pannel -->
+    <string name="qs_show_brightness_slider_title">Helligkeitsschieber anzeigen</string>
+    <string name="qs_show_brightness_slider_summary_on">Helligkeitsschieber im QS panel anzeigen (Standard)</string>
+    <string name="qs_show_brightness_slider_summary_off">Helligkeitsschieber im QS panel verstecken</string>
+
 </resources>
