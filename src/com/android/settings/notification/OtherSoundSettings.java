@@ -48,7 +48,8 @@ import java.util.List;
 import static com.android.settings.notification.SettingPref.TYPE_GLOBAL;
 import static com.android.settings.notification.SettingPref.TYPE_SYSTEM;
 
-public class OtherSoundSettings extends SettingsPreferenceFragment implements Indexable {
+public class OtherSoundSettings extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener, Indexable {
     private static final String TAG = "OtherSoundSettings";
 
     private static final int DEFAULT_ON = 1;
@@ -72,6 +73,10 @@ public class OtherSoundSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_DOCK_AUDIO_MEDIA = "dock_audio_media";
     private static final String KEY_EMERGENCY_TONE = "emergency_tone";
     private static final String KEY_SCREENSHOT_SHUTTER_SOUND = "screenshot_shutter_sound";
+    private static final String KEY_CAMERA_SOUNDS = "camera_sounds";
+    private static final String PROP_CAMERA_SOUND = "persist.sys.camera-sound";
+
+    private SwitchPreference mCameraSounds;
 
     // Boot Sounds needs to be a system property so it can be accessed during boot.
     private static final String KEY_BOOT_SOUNDS = "boot_sounds";
@@ -230,6 +235,10 @@ public class OtherSoundSettings extends SettingsPreferenceFragment implements In
         } else {
             removePreference(KEY_BOOT_SOUNDS);
         }
+
+        mCameraSounds = (SwitchPreference) findPreference(KEY_CAMERA_SOUNDS);
+        mCameraSounds.setChecked(SystemProperties.getBoolean(PROP_CAMERA_SOUND, true));
+        mCameraSounds.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -264,6 +273,14 @@ public class OtherSoundSettings extends SettingsPreferenceFragment implements In
     }
 
     // === Callbacks ===
+
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+        final String key = preference.getKey();
+        if (KEY_CAMERA_SOUNDS.equals(key)) {
+            SystemProperties.set(PROP_CAMERA_SOUND, (Boolean) objValue ? "1" : "0");
+        }
+        return true;
+    }
 
     private final class SettingsObserver extends ContentObserver {
         public SettingsObserver() {
