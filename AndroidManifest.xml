@@ -3399,6 +3399,24 @@
             android:theme="@android:style/Theme.NoDisplay"
             android:permission="android.permission.DUMP"
             android:enabled="@bool/config_has_help" />
+
+        <receiver
+            android:name=".DynamicShortcutsReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver 
+            android:name=".MagiskPackageReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
         <!-- This is the longest AndroidManifest.xml ever. -->
     </application>
 </manifest>

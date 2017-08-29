@@ -261,4 +261,7 @@
     <string name="magisk_title">Magisk Manager</string>
     <string name="magisk_summary">Root management</string>
 
+    <!-- Magisk Manager app shortcut -->
+    <string name="magisk_shortcut_title">Magisk Manager</string>
+
 </resources>
