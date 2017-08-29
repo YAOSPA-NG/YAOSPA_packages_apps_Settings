@@ -223,6 +223,11 @@
     <string name="swap_volume_buttons_title">Neu ausrichten</string>
     <string name="swap_volume_buttons_summary">Lautstärke-Tasten vertauschen, wenn der Bildschirm gedreht wird</string>
 
+    <!-- Development options - Recents enable paging -->
+    <string name="recents_enable_paging">Blättern in kürzlich geöffneten Apps</string>
+    <string name="recents_enable_paging_summary_on">Recents Knopf in kürzlich geöffneten Apps blättert durch die Apps</string>
+    <string name="recents_enable_paging_summary_off">Recents Knopf in kürzlich geöffneten Apps wechselt zur letzten App (Standard)</string>
+
     <!-- Preference category for LAN development settings. [CHAR LIMIT=25] -->
     <string name="debug_LAN_category">Netzwerk Einstellungen</string>
 

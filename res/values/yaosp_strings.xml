@@ -227,6 +227,11 @@
     <string name="swap_volume_buttons_title">Reorient volume rockers</string>
     <string name="swap_volume_buttons_summary">Swap volume buttons logically according to screen rotation</string>
 
+    <!-- Development options - Recents enable paging -->
+    <string name="recents_enable_paging">Enable paging in recents</string>
+    <string name="recents_enable_paging_summary_on">Tapping recents button while in recents screen will page through apps</string>
+    <string name="recents_enable_paging_summary_off">Tapping recents button while in recents screen will switch to last app (default)</string>
+
     <!-- Preference category for LAN development settings. [CHAR LIMIT=25] -->
     <string name="debug_LAN_category">LAN Settings</string>
 
