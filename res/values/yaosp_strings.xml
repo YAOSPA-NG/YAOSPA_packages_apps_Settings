@@ -257,4 +257,8 @@
     <string name="camera_sounds_title">Camera shutter sound</string>
     <string name="camera_sounds_summary_off">Warning - Disabling camera shutter sound may be illegal in certain countries !</string>
 
+    <!-- Magisk Manager dashboard entry -->
+    <string name="magisk_title">Magisk Manager</string>
+    <string name="magisk_summary">Root management</string>
+
 </resources>
