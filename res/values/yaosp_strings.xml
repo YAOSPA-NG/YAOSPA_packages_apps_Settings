@@ -233,4 +233,9 @@
     <!-- Hostname setting -->
     <string name="device_hostname">Device hostname</string>
 
+    <!-- Keyguard Voice assist -->
+    <string name="keyguard_voice_assist_title">Show voice assist on lockscreen</string>
+    <string name="keyguard_voice_assist_summary_on">Show voice assist (if available) as bottom left shortcut on lockscreen (default)</string>
+    <string name="keyguard_voice_assist_summary_off">Always show phone as bottom left shortcut on lockscreen</string>
+
 </resources>
