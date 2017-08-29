@@ -171,4 +171,7 @@ public class Settings extends SettingsActivity {
     public static class ButtonsSettingsActivity extends SettingsActivity { /* empty */ }
     public static class GesturesSettingsActivity extends SettingsActivity { /* empty */ }
     public static class PieSettingsActivity extends SettingsActivity { /* empty */ }
+
+    // Additions.
+    public static class DevRunningServicesActivity extends SettingsActivity { /* empty */ }
 }

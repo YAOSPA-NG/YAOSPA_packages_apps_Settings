@@ -79,6 +79,7 @@ import com.android.settings.applications.ManageDomainUrls;
 import com.android.settings.applications.NotificationApps;
 import com.android.settings.applications.ProcessStatsSummary;
 import com.android.settings.applications.ProcessStatsUi;
+import com.android.settings.applications.RunningServices;
 import com.android.settings.applications.UsageAccessDetails;
 import com.android.settings.applications.VrListenerSettings;
 import com.android.settings.applications.WriteSettingsDetails;
@@ -291,6 +292,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             Settings.TimerSwitchSettingsActivity.class.getName(),
             Settings.SystemUpdateActivity.class.getName(),
             Settings.OtherDeviceFunctionsSettingsActivity.class.getName(),
+            Settings.DevRunningServicesActivity.class.getName(),
     };
 
     private static final String[] ENTRY_FRAGMENTS = {
@@ -393,7 +395,9 @@ public class SettingsActivity extends SettingsDrawerActivity
             AutomaticStorageManagerSettings.class.getName(),
             ButtonsSettings.class.getName(),
             GesturesSettings.class.getName(),
-            PieSettings.class.getName()
+            PieSettings.class.getName(),
+            // Additions.
+            RunningServices.class.getName()
     };
 
     private static final String[] LIKE_SHORTCUT_INTENT_ACTION_ARRAY = {
