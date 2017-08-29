@@ -229,4 +229,9 @@
     <!-- Hostname setting -->
     <string name="device_hostname">Hostname des Gerätes</string>
 
+    <!-- Keyguard Voice assist -->
+    <string name="keyguard_voice_assist_title">Sprachsuche im Sperrbildscirm anzeigen</string>
+    <string name="keyguard_voice_assist_summary_on">Verknüpfung zur Sprachsuche (falls verfügbar) unten links im Sperrbildscirm anzeigen (Standard)</string>
+    <string name="keyguard_voice_assist_summary_off">Immer Verknüpfung zum Telefon unten links im Sperrbildscirm anzeigen</string>
+
 </resources>
