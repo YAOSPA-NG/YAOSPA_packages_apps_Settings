@@ -251,4 +251,9 @@
     <string name="lockscreen_pin_ripple_summary_on">Show ripple on keypad buttons when entering pin numbers (default)</string>
     <string name="lockscreen_pin_ripple_summary_off">Hide ripple on keypad buttons when entering pin numbers</string>
 
+    <!-- Show brightness slider in QS pannel -->
+    <string name="qs_show_brightness_slider_title">Show brightness slider</string>
+    <string name="qs_show_brightness_slider_summary_on">Show brightness slider in QS panel (default)</string>
+    <string name="qs_show_brightness_slider_summary_off">Hide brightness slider from QS panel</string>
+
 </resources>
