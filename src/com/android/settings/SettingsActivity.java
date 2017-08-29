@@ -233,8 +233,11 @@ public class SettingsActivity extends SettingsDrawerActivity
     public static final String META_DATA_KEY_FRAGMENT_CLASS =
         "com.android.settings.FRAGMENT_CLASS";
 
+
     public static final String META_DATA_KEY_LAUNCH_ACTIVITY_ACTION =
         "com.android.settings.ACTIVITY_ACTION";
+
+    private static final String MAGISK_FRAGMENT = "com.android.settings.MagiskManager";
 
     private static final String EXTRA_UI_OPTIONS = "settings:ui_options";
 
@@ -1151,7 +1154,14 @@ public class SettingsActivity extends SettingsDrawerActivity
             finish();
             return null;
         }
-
+        if (MAGISK_FRAGMENT.equals(fragmentName)) {
+            Intent magiskIntent = new Intent();
+            magiskIntent.setClassName("com.topjohnwu.magisk", 
+                "com.topjohnwu.magisk.SplashActivity");
+            startActivity(magiskIntent);
+            finish();
+            return null;
+        }
 
         if (SYSTEM_UPDATE.equals(fragmentName)) {
             SystemUpdateHandle ();
@@ -1340,6 +1350,22 @@ public class SettingsActivity extends SettingsDrawerActivity
         setTileEnabled(new ComponentName(packageName,
                 Settings.TimerSwitchSettingsActivity.class.getName()),
                 showTimerSwitch, isAdmin, pm);
+
+        // Magisk Manager
+        boolean magiskSupported = false;
+        boolean magiskEnabled = false;
+        try {
+            magiskSupported = (getPackageManager()
+                .getPackageInfo("com.topjohnwu.magisk", 0).versionCode > 0);
+            ApplicationInfo magiskAi = getPackageManager()
+                .getApplicationInfo("com.topjohnwu.magisk",0);
+            magiskEnabled = magiskAi.enabled;
+        } catch (PackageManager.NameNotFoundException e) {
+            // ignore
+        }
+        setTileEnabled(new ComponentName(packageName,
+                        Settings.MagiskActivity.class.getName()),
+            magiskSupported & magiskEnabled, isAdmin, pm);
 
         if (UserHandle.MU_ENABLED && !isAdmin) {
             // When on restricted users, disable all extra categories (but only the settings ones).
