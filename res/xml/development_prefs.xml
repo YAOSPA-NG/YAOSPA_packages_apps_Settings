@@ -401,7 +401,15 @@
         <Preference
             android:key="reset_shortcut_manager_throttling"
             android:title="@string/reset_shortcut_manager_throttling" />
-     </PreferenceCategory>
+
+        <com.android.settings.preference.SecureSettingSwitchPreference
+            android:key="recents_enable_paging"
+            android:title="@string/recents_enable_paging"
+            android:summaryOn="@string/recents_enable_paging_summary_on"
+            android:summaryOff="@string/recents_enable_paging_summary_off"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory android:key="debug_LAN_category"
             android:title="@string/debug_LAN_category">
