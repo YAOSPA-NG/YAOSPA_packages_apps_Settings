@@ -253,4 +253,34 @@
     <string name="camera_sounds_title">Kameraverschlusston</string>
     <string name="camera_sounds_summary_off">Achtung - In einigen Ländern kann das Abstellen des Kameraverschlusstons gesetzeswidrig sein !</string>
 
+    <!-- Slim Recent panel -->
+    <string name="slim_recents_title">Slim Recents</string>
+    <string name="use_slim_recents_title">Slim Recents verwenden</string>
+    <string name="use_slim_recents_summary">Slim Recents an Stelle des normales Recents verwenden</string>
+    <string name="show_running_tasks_title">Nur laufende Apps anzeigen</string>
+    <string name="recents_max_apps_title">Maximal erlaubte Apps</string>
+    <string name="recent_panel_scale_title">Größe</string>
+    <string name="recent_panel_expanded_mode_title">Erweiterter Modus</string>
+    <string name="recent_panel_expanded_mode_summary">Apps im erweiterten Modus</string>
+    <string name="recent_panel_expanded_mode_auto">Automatisch (Standard)</string>
+    <string name="recent_panel_expanded_mode_always">Immer</string>
+    <string name="recent_panel_expanded_mode_never">Nie</string>
+    <string name="recent_panel_show_topmost_title">Vordergrund App zeigen</string>
+    <string name="recent_panel_show_topmost_summary">Vordergrund App nicht aus den Recents ausschliessen</string>
+    <string name="recent_panel_bg_color_title">Panel Hintergrundfarbe</string>
+    <string name="recent_card_bg_color_title">Karten Hintergrundfarbe</string>
+    <string name="recent_reset_title">Auf Stock Farben zurücksetzen</string>
+    <string name="recent_reset_confirm">Wirklich auf Slim Recents Stock Farben zurücksetzen ?</string>
+    <string name="default_auto_string">Standard (App basierend)</string>
+    <string name="slim_icon_pack_title">Icon Pack</string>
+    <string name="slim_icon_pack_summary">Einen Custom Icon Pack für die App Icons in Pannel verwenden</string>
+    <string name="no_iconpacks_summary">Kein Icon Pack installiert</string>
+    <string name="dialog_pick_iconpack_title">Icon Pack auswählen</string>
+    <string name="default_iconpack_title">Standard Icons</string>
+    <string name="slim_recents_corner_radius_title">Runde Ecken für Karten verwenden</string>
+
+    <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="recent_panel_lefty_mode_title">Am linken Bildschirmran anzeigen</string>
+    <string name="recent_panel_lefty_mode_summary">Slim Recents am linken Bildschirmran anzeigen</string>
+
 </resources>
