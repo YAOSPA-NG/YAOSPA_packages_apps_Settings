@@ -246,11 +246,41 @@
 
     <!-- Show brightness slider in QS pannel -->
     <string name="qs_show_brightness_slider_title">Afficher le curseur de luminosité</string>
-    <string name="qs_show_brightness_slider_summary_on">Afficher le curseur de luminosité dans le panel QS (default)</string>
+    <string name="qs_show_brightness_slider_summary_on">Afficher le curseur de luminosité dans le panel QS (défaut)</string>
     <string name="qs_show_brightness_slider_summary_off">Masquer le curseur de luminosité dans le panel QS</string>
 
     <!-- Camera sound switch -->
     <string name="camera_sounds_title">Son de l\'appareil photo</string>
     <string name="camera_sounds_summary_off">Avertissement - Désactiver Son de l\'appareil photo peut être illégal dans certains pays !</string>
+
+    <!-- Slim Recent panel -->
+    <string name="slim_recents_title">Slim Recents</string>
+    <string name="use_slim_recents_title">Utiliser Slim Recents</string>
+    <string name="use_slim_recents_summary">Utiliser Slim Recents au lieu du gestionnaire de tâches normal</string>
+    <string name="show_running_tasks_title">N\'afficher que les application en cours d\'exécution</string>
+    <string name="recents_max_apps_title">Nombre maximum d\'applications autorisées</string>
+    <string name="recent_panel_scale_title">Taille</string>
+    <string name="recent_panel_expanded_mode_title">Mode étendu</string>
+    <string name="recent_panel_expanded_mode_summary">Mode étendu pour tâches récentes</string>
+    <string name="recent_panel_expanded_mode_auto">Auto (défaut)</string>
+    <string name="recent_panel_expanded_mode_always">Toujours</string>
+    <string name="recent_panel_expanded_mode_never">Jamais</string>
+    <string name="recent_panel_show_topmost_title">Afficher la tâche an avant plan</string>
+    <string name="recent_panel_show_topmost_summary">Ne pas exclure la tâche en avant plan dans Slim Recents</string>
+    <string name="recent_panel_bg_color_title">Couleur de l\'arrière-plan du panneau</string>
+    <string name="recent_card_bg_color_title">Couleur de l\'arrière-plan de la carte</string>
+    <string name="recent_reset_title">Réinitialiser les couleurs</string>
+    <string name="recent_reset_confirm">Voulez-vous réellement utiliser les couleurs par défaut ?</string>
+    <string name="default_auto_string">Défaut (suivant l\'application)</string>
+    <string name="slim_icon_pack_title">Pack d\'icônes</string>
+    <string name="slim_icon_pack_summary">Utiliser un pack d\'icône pour les app dans le pannel</string>
+    <string name="no_iconpacks_summary">Aucun pack d\'icônes installé</string>
+    <string name="dialog_pick_iconpack_title">Choisir le pack d\'icônes</string>
+    <string name="default_iconpack_title">Icônes par défaut</string>
+    <string name="slim_recents_corner_radius_title">Utiliser des coins arrondis pour les coins des cartes</string>
+
+    <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="recent_panel_lefty_mode_title">Afficher du côté gauche de l\'écran</string>
+    <string name="recent_panel_lefty_mode_summary">Afficher le pannel des app du côté gauche de l\'écran</string>
 
 </resources>
