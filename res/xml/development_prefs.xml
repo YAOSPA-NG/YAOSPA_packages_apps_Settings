@@ -409,6 +409,11 @@
             android:summaryOff="@string/recents_enable_paging_summary_off"
             android:defaultValue="false" />
 
+        <PreferenceScreen
+            android:key="slim_recent_panel"
+            android:fragment="com.android.settings.SlimRecentPanel"
+            android:title="@string/slim_recents_title"
+            android:persistent="false" />
     </PreferenceCategory>
 
     <PreferenceCategory android:key="debug_LAN_category"
