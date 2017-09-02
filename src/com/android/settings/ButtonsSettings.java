@@ -147,7 +147,12 @@ public class ButtonsSettings extends SettingsPreferenceFragment implements
         /* Swap Navigation Keys */
         mSwapNavigationkeys = (SwitchPreference) findPreference(KEY_SWAP_NAVIGATION_KEYS);
         if (mSwapNavigationkeys != null) {
-            mSwapNavigationkeys.setOnPreferenceChangeListener(this);
+            if (mDeviceHardwareKeys != 0) {
+                mSwapNavigationkeys.setOnPreferenceChangeListener(this);
+            } else {
+                mSwapNavigationkeys = null;
+                removePreference(KEY_SWAP_NAVIGATION_KEYS);
+            }
         }
 
         /* Swap Slider order */
