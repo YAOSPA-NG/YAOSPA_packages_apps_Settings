@@ -286,4 +286,16 @@
     <string name="recent_panel_lefty_mode_title">Afficher du côté gauche de l\'écran</string>
     <string name="recent_panel_lefty_mode_summary">Afficher le pannel des app du côté gauche de l\'écran</string>
 
+    <!-- Volume Steps -->
+    <string name="volume_steps_title">Niveaux de volume</string>
+    <string name="volume_steps_summary">Personalisation des niveaux de volume</string>
+    <string name="volume_steps_alarm_title">Niveaux de volume: Alarme</string>
+    <string name="volume_steps_dtmf_title">Niveaux de volume: Tonalité du numéroteur</string>
+    <string name="volume_steps_music_title">Niveaux de volume: Média</string>
+    <string name="volume_steps_notification_title">Niveaux de volume: Notification</string>
+    <string name="volume_steps_ring_title">Niveaux de volume: Sonnerie</string>
+    <string name="volume_steps_system_title">Niveaux de volume: Système</string>
+    <string name="volume_steps_voice_call_title">Volume steps: Appel</string>
+    <string name="volume_steps_reset">Réinitialiser</string>
+
 </resources>
