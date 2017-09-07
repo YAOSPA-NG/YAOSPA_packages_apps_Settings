@@ -330,4 +330,16 @@
     <string name="display_rotation_180_title">180 градусов</string>
     <string name="display_rotation_270_title">270 градусов</string>
 
+    <!-- Volume Steps -->
+    <string name="volume_steps_title">Шкала громкости</string>
+    <string name="volume_steps_summary">Настроить шкалу громкости</string>
+    <string name="volume_steps_alarm_title">Количество шагов: Будильник</string>
+    <string name="volume_steps_dtmf_title">Количество шагов: Номеронабиратель</string>
+    <string name="volume_steps_music_title">Количество шагов: Медиа</string>
+    <string name="volume_steps_notification_title">Количество шагов: Уведомления</string>
+    <string name="volume_steps_ring_title">Количество шагов: Рингтон</string>
+    <string name="volume_steps_system_title">Количество шагов: Система</string>
+    <string name="volume_steps_voice_call_title">Количество шагов: Голосовая связь</string>
+    <string name="volume_steps_reset">Сброс</string>
+
 </resources>
