@@ -502,7 +502,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
         if (mNetworkNameDisplayedPreference != null) {
             int showNetworkNameMode = Settings.System.getInt(getContentResolver(),
-                    SHOW_NETWORK_NAME_MODE, SHOW_NETWORK_NAME_ON); //default is ON
+                    SHOW_NETWORK_NAME_MODE, SHOW_NETWORK_NAME_OFF); //default is OFF
             mNetworkNameDisplayedPreference.setChecked(showNetworkNameMode != 0);
         }
 
