@@ -24,7 +24,7 @@
     android:paddingTop="8dip"
     android:paddingBottom="8dip"
     android:orientation="horizontal"
-    android:background="@drawable/expanded_item_background">
+    android:background="?android:attr/selectableItemBackground">
 
     <ImageView
         android:id="@+id/app_icon"
@@ -59,7 +59,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal|top"
             android:textAppearance="@style/TextAppearance.Small"
-            android:textAlignment="viewStart" />
+            android:textAlignment="viewStart"
+            android:textColor="?android:attr/textColorPrimary" />
 
     </LinearLayout>
 
