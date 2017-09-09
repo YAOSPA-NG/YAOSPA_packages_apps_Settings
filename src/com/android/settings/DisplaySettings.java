@@ -141,6 +141,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_DOZE = "doze";
     private static final String KEY_ADVANCED_DOZE_OPTIONS = "advanced_doze_options";
 
+    private static final String ROTATION_LOCKSCREEN = "Lockscreen";
+    private static final String ROTATION_ANGLE_0 = "0";
+    private static final String ROTATION_ANGLE_90 = "90";
+    private static final String ROTATION_ANGLE_180 = "180";
+    private static final String ROTATION_ANGLE_270 = "270";
+
     private TimeoutListPreference mScreenTimeoutPreference;
     private PreferenceScreen mDisplayRotationPreference;
     private ListPreference mNightModePreference;
@@ -389,17 +395,23 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         ArrayList<String> rotationList = new ArrayList<String>();
         String delim = "";
 
+        boolean enableLockscreenRotation = Settings.System.getInt(getContentResolver(),
+                        Settings.System.LOCKSCREEN_ROTATION, 0) != 0;
+
+        if (enableLockscreenRotation) {
+            rotationList.add(ROTATION_LOCKSCREEN);
+        }
         if ((mode & DisplayRotation.ROTATION_0_MODE) != 0) {
-            rotationList.add("0");
+            rotationList.add(ROTATION_ANGLE_0);
         }
         if ((mode & DisplayRotation.ROTATION_90_MODE) != 0) {
-            rotationList.add("90");
+            rotationList.add(ROTATION_ANGLE_90);
         }
         if ((mode & DisplayRotation.ROTATION_180_MODE) != 0) {
-            rotationList.add("180");
+            rotationList.add(ROTATION_ANGLE_180);
         }
         if ((mode & DisplayRotation.ROTATION_270_MODE) != 0) {
-            rotationList.add("270");
+            rotationList.add(ROTATION_ANGLE_270);
         }
         for (int i = 0; i < rotationList.size(); i++) {
             summary.append(delim).append(rotationList.get(i));
