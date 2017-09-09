@@ -298,4 +298,15 @@
     <string name="volume_steps_voice_call_title">Volume steps: Appel</string>
     <string name="volume_steps_reset">Réinitialiser</string>
 
+    <!-- Rotation Modes  -->
+    <string name="display_rotation_title">Rotation</string>
+    <string name="display_rotation_disabled">Désactivé</string>
+    <string name="display_rotation_unit">degré(s)</string>
+    <string name="display_lockscreen_rotation_title">Rotation de l\'écran de vérouillage</string>
+    <string name="display_rotation_category_title">Modes de rotation</string>
+    <string name="display_rotation_0_title">0 degré</string>
+    <string name="display_rotation_90_title">90 degrés</string>
+    <string name="display_rotation_180_title">180 degrés</string>
+    <string name="display_rotation_270_title">270 degrés</string>
+
 </resources>
