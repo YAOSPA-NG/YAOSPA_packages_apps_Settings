@@ -184,7 +184,11 @@ public class PowerUsageSummary extends PowerUsageBase {
                     .setAlphabeticShortcut('t');
         }
 
-        menu.add(Menu.NONE, MENU_HIGH_POWER_APPS, Menu.NONE, R.string.high_power_apps);
+        MenuItem powerOptimisations = menu.add(Menu.NONE, MENU_HIGH_POWER_APPS, Menu.NONE,
+                R.string.high_power_apps);
+        powerOptimisations.setIcon(R.drawable.ic_settings_battery_style)
+                   .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS
+                   | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
 
         PowerUsageFeatureProvider powerUsageFeatureProvider =
                 FeatureFactory.getFactory(getContext()).getPowerUsageFeatureProvider(getContext());
@@ -194,7 +198,8 @@ public class PowerUsageSummary extends PowerUsageBase {
                     Menu.NONE, R.string.additional_battery_info);
         }
 
-        SubMenu batteryStyle = menu.addSubMenu(1, MENU_BATTERY_STYLE, 1, R.string.battery_style_title);
+        SubMenu batteryStyle = menu.addSubMenu(1, MENU_BATTERY_STYLE, 1,
+                R.string.battery_style_title);
 
         batteryStyle.add(1, SUBMENU_BATTERY_BAR, 1, R.string.battery_style_icon)
                     .setChecked(selectedIcon == 0);
@@ -207,17 +212,20 @@ public class PowerUsageSummary extends PowerUsageBase {
         batteryStyle.setGroupCheckable(1, true, true);
 
         MenuItem batteryIcon = batteryStyle.getItem();
-        batteryIcon.setIcon(R.drawable.ic_settings_battery_style)
-                   .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+//        batteryIcon.setIcon(R.drawable.ic_settings_battery_style)
+//                   .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS
+//                   | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+        batteryIcon.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
 
-        SubMenu batteryPercentMenu = menu.addSubMenu(1, MENU_BATTERY_PERCENT, 1, R.string.battery_percentage_title);
+        SubMenu batteryPercentMenu = menu.addSubMenu(1, MENU_BATTERY_PERCENT, 1,
+                R.string.battery_percentage_title);
 
-        batteryPercentMenu.add(1, SUBMENU_BATTERY_PERCENT_HIDDEN, 1, R.string.battery_percentage_default)
-                    .setChecked(selectedPercentage == 0);
-        batteryPercentMenu.add(1, SUBMENU_BATTERY_PERCENT_INSIDE, 2, R.string.battery_percentage_text_inside)
-                    .setChecked(selectedPercentage == 1);
-        batteryPercentMenu.add(1, SUBMENU_BATTERY_PERCENT_NEXT, 3, R.string.battery_percentage_text_next)
-                    .setChecked(selectedPercentage == 2);
+        batteryPercentMenu.add(1, SUBMENU_BATTERY_PERCENT_HIDDEN, 1,
+                R.string.battery_percentage_default).setChecked(selectedPercentage == 0);
+        batteryPercentMenu.add(1, SUBMENU_BATTERY_PERCENT_INSIDE, 2,
+                R.string.battery_percentage_text_inside).setChecked(selectedPercentage == 1);
+        batteryPercentMenu.add(1, SUBMENU_BATTERY_PERCENT_NEXT, 3,
+                R.string.battery_percentage_text_next).setChecked(selectedPercentage == 2);
         batteryPercentMenu.setGroupCheckable(1, true, true);
 
         MenuItem batteryPercent = batteryPercentMenu.getItem();
