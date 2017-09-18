@@ -124,8 +124,7 @@
   <string name="battery_light_list_title">Colori</string>
   <string name="battery_light_low_color_title">Batteria scarica</string>
   <string name="battery_light_medium_color_title">In carica</string>
-  <string name="battery_light_full_color_title">Carico al 90%</string>
-  <string name="battery_light_really_full_color_title">Carico al 100%</string>
+  <string name="battery_light_full_color_title">Carico</string>
   <string name="profile_choose_app">Scegli l\'app</string>
   <string name="edit_battery_settings">Modifica impostazioni batteria</string>
   <string name="led_color_green">Verde</string>

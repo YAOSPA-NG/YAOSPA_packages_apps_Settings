@@ -124,8 +124,7 @@
   <string name="battery_light_list_title">Farger</string>
   <string name="battery_light_low_color_title">Lavt batteri</string>
   <string name="battery_light_medium_color_title">Lader</string>
-  <string name="battery_light_full_color_title">Ladet (90%)</string>
-  <string name="battery_light_really_full_color_title">Ladet (100%)</string>
+  <string name="battery_light_full_color_title">Ladet</string>
   <string name="profile_choose_app">Velg app</string>
   <string name="edit_battery_settings">Endre batteriinnstillinger</string>
   <string name="led_color_green">Grønn</string>

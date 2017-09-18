@@ -124,8 +124,7 @@
   <string name="battery_light_list_title">Farby</string>
   <string name="battery_light_low_color_title">Slabá batéria</string>
   <string name="battery_light_medium_color_title">Nabíjanie</string>
-  <string name="battery_light_full_color_title">Nabitá (90%)</string>
-  <string name="battery_light_really_full_color_title">Nabitá (100%)</string>
+  <string name="battery_light_full_color_title">Nabitá</string>
   <string name="profile_choose_app">Vyberte aplikáciu</string>
   <string name="edit_battery_settings">Upraviť nastavenia batérie</string>
   <string name="led_color_green">Zelená</string>

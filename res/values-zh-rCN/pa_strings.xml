@@ -124,8 +124,7 @@
   <string name="battery_light_list_title">颜色</string>
   <string name="battery_light_low_color_title">电量低</string>
   <string name="battery_light_medium_color_title">正在充电</string>
-  <string name="battery_light_full_color_title">正在充电 (90%)</string>
-  <string name="battery_light_really_full_color_title">已充满 (100%)</string>
+  <string name="battery_light_full_color_title">正在充电</string>
   <string name="profile_choose_app">选择应用</string>
   <string name="edit_battery_settings">编辑电量设置</string>
   <string name="led_color_green">绿色</string>
