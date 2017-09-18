@@ -23,6 +23,9 @@
     <string name="cpu_info">CPU</string>
     <string name="mem_info">Memory</string>
 
+    <!-- Phone info shortcut -->
+    <string name="device_info_title">Phone info</string>
+
     <!-- ADB debugging notifications -->
     <string name="adb_notify">Android debugging notification</string>
     <string name="adb_notify_summary">Display a notification when android debugging is enabled</string>
