@@ -37,7 +37,6 @@ import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.RemoteException;
 import android.os.SystemProperties;
 import android.os.UserHandle;
@@ -155,10 +154,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private boolean isRJILMode;
     private final Configuration mCurConfig = new Configuration();
 
-    private PreferenceCategory mLedsCategory;
-    private Preference mChargingLeds;
-    private Preference mNotificationLeds;
-
     private PreferenceCategory mDozeCategory;
     private SwitchPreference mDozePreference;
     private PreferenceScreen mAdvancedDozeOptions;
@@ -179,23 +174,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mSharedPreferences = getContext().getSharedPreferences(FILE_FONT_WARING,
                 Activity.MODE_PRIVATE);
         mEditor = mSharedPreferences.edit();
-
-        mLedsCategory = (PreferenceCategory) findPreference("leds");
-        mChargingLeds = (Preference) findPreference("charging_light");
-        mNotificationLeds = (Preference) findPreference("notification_light");
-        if (mChargingLeds != null
-                && !getResources().getBoolean(
-                        com.android.internal.R.bool.config_intrusiveBatteryLed)) {
-            mLedsCategory.removePreference(mChargingLeds);
-        }
-        if (mNotificationLeds != null
-                && !getResources().getBoolean(
-                        com.android.internal.R.bool.config_intrusiveNotificationLed)) {
-            mLedsCategory.removePreference(mNotificationLeds);
-        }
-        if (mChargingLeds == null && mNotificationLeds == null) {
-            getPreferenceScreen().removePreference(mLedsCategory);
-        }
 
         PreferenceScreen prefSet = getPreferenceScreen();
 

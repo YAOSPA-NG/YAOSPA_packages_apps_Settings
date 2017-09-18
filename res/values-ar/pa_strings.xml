@@ -124,8 +124,7 @@
   <string name="battery_light_list_title">الألوان</string>
   <string name="battery_light_low_color_title">بطاية ضعيفة</string>
   <string name="battery_light_medium_color_title">جاري الشحن</string>
-  <string name="battery_light_full_color_title">تم الشحن (90%)</string>
-  <string name="battery_light_really_full_color_title">تم الشحن (100%)</string>
+  <string name="battery_light_full_color_title">تم الشحن</string>
   <string name="profile_choose_app">اختر تطبيق</string>
   <string name="edit_battery_settings">تحرير إعدادات البطارية</string>
   <string name="led_color_green">أخضر</string>
