@@ -327,4 +327,13 @@
     <string name="display_rotation_180_title">180 degrees</string>
     <string name="display_rotation_270_title">270 degrees</string>
 
+    <!-- Fingerprint reboot unlock -->
+    <string name="fp_unlock_keystore_title">Fingerprint reboot unlock</string>
+    <string name="fp_unlock_keystore_pin_summary_on">Pin not required after a fingerprint unlock on reboot</string>
+    <string name="fp_unlock_keystore_pin_summary_off">Require Pin after a fingerprint unlock on reboot (default)</string>
+    <string name="fp_unlock_keystore_password_summary_on">Password not required after a fingerprint unlock on reboot</string>
+    <string name="fp_unlock_keystore_password_summary_off">Require Password after a fingerprint unlock on reboot (default)</string>
+    <string name="fp_unlock_keystore_pattern_summary_on">Pattern not required after a fingerprint unlock on reboot</string>
+    <string name="fp_unlock_keystore_pattern_summary_off">Require Pattern after a fingerprint unlock on reboot (default)</string>
+
 </resources>

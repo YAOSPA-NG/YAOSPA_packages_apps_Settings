@@ -309,4 +309,13 @@
     <string name="display_rotation_180_title">180 Grad</string>
     <string name="display_rotation_270_title">270 Grad</string>
 
+    <!-- Fingerprint reboot unlock -->
+    <string name="fp_unlock_keystore_title">Fingerabdruck Entsperrung bei Neustart</string>
+    <string name="fp_unlock_keystore_pin_summary_on">Pin erfassen nicht erforderlich nach Fingerabdruck Entpserrung bei Neustart</string>
+    <string name="fp_unlock_keystore_pin_summary_off">Pin erfassen erforderlich nach Fingerabdruck Entpserrung bei Neustart (Standard)</string>
+    <string name="fp_unlock_keystore_password_summary_on">Passwort erfassen nicht erforderlich nach Fingerabdruck Entpserrung bei Neustart</string>
+    <string name="fp_unlock_keystore_password_summary_off">Passwort erfassen erforderlich nach Fingerabdruck Entpserrung bei Neustart (Standard)</string>
+    <string name="fp_unlock_keystore_pattern_summary_on">Muster erfassen nicht erforderlich nach Fingerabdruck Entpserrung bei Neustart</string>
+    <string name="fp_unlock_keystore_pattern_summary_off">Muster erfassen erforderlich nach Fingerabdruck Entpserrung bei Neustart (Standard)</string>
+
 </resources>

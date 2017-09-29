@@ -309,4 +309,13 @@
     <string name="display_rotation_180_title">180 degrés</string>
     <string name="display_rotation_270_title">270 degrés</string>
 
+    <!-- Fingerprint reboot unlock -->
+    <string name="fp_unlock_keystore_title">Déverrouillage par empreinte digitale au démarrage</string>
+    <string name="fp_unlock_keystore_pin_summary_on">La saisie du code PIN n\'est pas nécessaire après déverrouillage par empreinte digitale au démarrage</string>
+    <string name="fp_unlock_keystore_pin_summary_off">La saisie du code PIN est obligatoire après déverrouillage par empreinte digitale au démarrage (défaut)</string>
+    <string name="fp_unlock_keystore_password_summary_on">La saisie du mot de passe n\'est pas nécessaire après déverrouillage par empreinte digitale au démarrage</string>
+    <string name="fp_unlock_keystore_password_summary_off">La saisie du mot de passe PIN est obligatoire après déverrouillage par empreinte digitale au démarrage (défaut)</string>
+    <string name="fp_unlock_keystore_pattern_summary_on">La saisie du schéma n\'est pas nécessaire après déverrouillage par empreinte digitale au démarrage</string>
+    <string name="fp_unlock_keystore_pattern_summary_off">La saisie du schéma est obligatoire après déverrouillage par empreinte digitale au démarrage (défaut)</string>
+
 </resources>

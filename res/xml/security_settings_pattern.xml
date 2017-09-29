@@ -41,6 +41,13 @@
             android:summaryOff="@string/keyguard_voice_assist_summary_off"
             android:defaultValue="true" />
 
+        <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="fp_unlock_keystore"
+            android:title="@string/fp_unlock_keystore_title"
+            android:summaryOn="@string/fp_unlock_keystore_pattern_summary_on"
+            android:summaryOff="@string/fp_unlock_keystore_pattern_summary_off"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

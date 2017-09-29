@@ -54,6 +54,13 @@
             android:summaryOff="@string/lockscreen_pin_ripple_summary_off"
             android:defaultValue="true" />
 
+        <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="fp_unlock_keystore"
+            android:title="@string/fp_unlock_keystore_title"
+            android:summaryOn="@string/fp_unlock_keystore_pin_summary_on"
+            android:summaryOff="@string/fp_unlock_keystore_pin_summary_off"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
