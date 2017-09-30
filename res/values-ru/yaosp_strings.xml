@@ -342,4 +342,18 @@
     <string name="volume_steps_voice_call_title">Количество шагов: Голосовая связь</string>
     <string name="volume_steps_reset">Сброс</string>
 
+    <!-- Fingerprint reboot unlock -->
+    <string name="fp_unlock_keystore_title">Разблокировка отпечатком пальца после перезагрузки</string>
+    <string name="fp_unlock_keystore_pin_summary_on">При разблокировке отпечатком пальца после перезагрузки PIN не требуется</string>
+    <string name="fp_unlock_keystore_pin_summary_off">Запрашивать PIN при разблокировке отпечатком пальца после перезагрузки (по умолчанию)</string>
+    <string name="fp_unlock_keystore_password_summary_on">При разблокировке отпечатком пальца после перезагрузки пароль не требуется</string>
+    <string name="fp_unlock_keystore_password_summary_off">Запрашивать пароль при разблокировке отпечатком пальца после перезагрузки (по умолчанию)</string>
+    <string name="fp_unlock_keystore_pattern_summary_on">При разблокировке отпечатком пальца после перезагрузки графический ключ не требуется</string>
+    <string name="fp_unlock_keystore_pattern_summary_off">Запрашивать графический ключ при разблокировке отпечатком пальца после перезагрузки (по умолчанию)</string>
+
+    <!-- LED notifications -->
+    <string name="leds">Настройки диода</string>
+    <string name="battery_light_settings">Индикация заряда батареи</string>
+    <string name="notification_light_settings">Индикация уведомлений</string>
+
 </resources>
