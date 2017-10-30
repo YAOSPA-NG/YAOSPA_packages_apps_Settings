@@ -400,7 +400,8 @@ public class SettingsActivity extends SettingsDrawerActivity
             GesturesSettings.class.getName(),
             PieSettings.class.getName(),
             // Additions.
-            RunningServices.class.getName()
+            RunningServices.class.getName(),
+            SlimRecentsBlacklist.class.getName()
     };
 
     private static final String[] LIKE_SHORTCUT_INTENT_ACTION_ARRAY = {

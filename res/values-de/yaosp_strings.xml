@@ -281,10 +281,17 @@
     <string name="dialog_pick_iconpack_title">Icon Pack auswählen</string>
     <string name="default_iconpack_title">Standard Icons</string>
     <string name="slim_recents_corner_radius_title">Runde Ecken für Karten verwenden</string>
-
     <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Am linken Bildschirmran anzeigen</string>
     <string name="recent_panel_lefty_mode_summary">Slim Recents am linken Bildschirmran anzeigen</string>
+    <string name="profile_choose_app">App auswählen</string>
+    <string name="dialog_delete_title">Löschen</string>
+    <string name="dialog_delete_message">Ausgewählter Eintrag entfernen ?</string>
+    <string name="slim_blacklist_apps_cat_title">Blacklist</string>
+    <string name="slim_blacklist_apps_title">App blacklist</string>
+    <string name="slim_blacklist_apps_summary">Apps die in den Recents ausgeschlossen werden sollen</string>
+    <string name="slim_blacklist_add_apps_title">App hinzufügen</string>
+    <string name="slim_blacklist_add_apps_summary">Hier Tippen um eine App hinzuzufügen, auf eine App tippen um diese zu entfernen</string>
 
     <!-- Volume Steps -->
     <string name="volume_steps_title">Lautstärke Stufen</string>
