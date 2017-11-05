@@ -254,6 +254,8 @@
     <string name="camera_sounds_summary_off">Achtung - In einigen Ländern kann das Abstellen des Kameraverschlusstons gesetzeswidrig sein !</string>
 
     <!-- Slim Recent panel -->
+    <string name="recents_category_title">Recents</string>
+    <string name="recents_title">Recents Einstellungen</string>
     <string name="slim_recents_title">Slim Recents</string>
     <string name="use_slim_recents_title">Slim Recents verwenden</string>
     <string name="use_slim_recents_summary">Slim Recents an Stelle des normales Recents verwenden</string>

@@ -93,4 +93,15 @@
             android:title="@string/special_access" />
 
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/recents_category_title">
+
+        <PreferenceScreen
+            android:key="recent_panel"
+            android:fragment="com.android.settings.SlimRecentPanel"
+            android:title="@string/recents_title"
+            android:persistent="false" />
+
+    </PreferenceCategory>
 </PreferenceScreen>
