@@ -31,6 +31,7 @@ import android.database.ContentObserver;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
@@ -61,6 +62,7 @@ import java.util.Map;
 import java.util.List;
 
 import com.android.settings.preference.SystemSettingSwitchPreference;
+import com.android.settings.preference.SecureSettingSwitchPreference;
 import com.android.settings.preferences.CustomSeekBarPreference;
 import com.android.settings.preferences.colorpicker.ColorPickerPreference;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
@@ -73,6 +75,7 @@ public class SlimRecentPanel extends SettingsPreferenceFragment implements
     private static final String TAG = "RecentPanelSettings";
 
     // Preferences
+    private static final String RECENTS_USE_SLIMRECENTS = "use_slim_recents";
     private static final String RECENTS_MAX_APPS = "recents_max_apps";
     private static final String RECENT_PANEL_LEFTY_MODE =
             "recent_panel_lefty_mode";
@@ -84,6 +87,8 @@ public class SlimRecentPanel extends SettingsPreferenceFragment implements
             "recent_panel_bg_color";
     private static final String RECENT_CARD_BG_COLOR =
             "recent_card_bg_color";
+
+    private static final String RECENT_PAGING = "recents_enable_paging";
 
     private final static String[] sSupportedActions = new String[] {
         "org.adw.launcher.THEMES",
@@ -99,12 +104,15 @@ public class SlimRecentPanel extends SettingsPreferenceFragment implements
     private static final int MENU_RESET = Menu.FIRST;
     private static final int DIALOG_RESET_CONFIRM = 1;
 
+    private SwitchPreference mUseSlimRecents;
     private CustomSeekBarPreference mMaxApps;
     private SystemSettingSwitchPreference mRecentPanelLeftyMode;
     private CustomSeekBarPreference mRecentPanelScale;
     private ListPreference mRecentPanelExpandedMode;
     private ColorPickerPreference mRecentPanelBgColor;
     private ColorPickerPreference mRecentCardBgColor;
+
+    private SecureSettingSwitchPreference mRecentsPaging;
 
     private AlertDialog mDialog;
     private ListView mListView;
@@ -221,6 +229,11 @@ public class SlimRecentPanel extends SettingsPreferenceFragment implements
             Settings.System.putInt(getContext().getContentResolver(),
                 Settings.System.RECENTS_MAX_APPS, Integer.valueOf(String.valueOf(newValue)));
             return true;
+        } else if (preference == mUseSlimRecents) {
+            Settings.System.putInt(getContext().getContentResolver(),
+                Settings.System.USE_SLIM_RECENTS, mUseSlimRecents.isChecked() ? 0 : 1);
+            mUseSlimRecents.setChecked(!mUseSlimRecents.isChecked());
+            mRecentsPaging.setEnabled(mUseSlimRecents.isChecked() ? false : true);
         }
         return false;
     }
@@ -252,9 +265,16 @@ public class SlimRecentPanel extends SettingsPreferenceFragment implements
         final int recentExpandedMode = Settings.System.getInt(getContext().getContentResolver(),
                 Settings.System.RECENT_PANEL_EXPANDED_MODE, 0);
         mRecentPanelExpandedMode.setValue(recentExpandedMode + "");
+
+        mRecentsPaging.setEnabled(mUseSlimRecents.isChecked() ? false : true);
     }
 
     private void initializeAllPreferences() {
+        mUseSlimRecents = (SwitchPreference) findPreference(RECENTS_USE_SLIMRECENTS);
+        mUseSlimRecents.setOnPreferenceChangeListener(this);
+        mUseSlimRecents.setChecked(Settings.System.getInt(getContext().getContentResolver(),
+                Settings.System.USE_SLIM_RECENTS, 0) == 1 ? true : false);
+
         mRecentPanelLeftyMode =
                 (SystemSettingSwitchPreference) findPreference(RECENT_PANEL_LEFTY_MODE);
         mRecentPanelLeftyMode.setOnPreferenceChangeListener(this);
@@ -297,6 +317,10 @@ public class SlimRecentPanel extends SettingsPreferenceFragment implements
         mRecentPanelExpandedMode =
                 (ListPreference) findPreference(RECENT_PANEL_EXPANDED_MODE);
         mRecentPanelExpandedMode.setOnPreferenceChangeListener(this);
+
+        mRecentsPaging =
+                (SecureSettingSwitchPreference) findPreference(RECENT_PAGING);
+        mRecentsPaging.setEnabled(mUseSlimRecents.isEnabled() ? false : true);
     }
 
     @Override

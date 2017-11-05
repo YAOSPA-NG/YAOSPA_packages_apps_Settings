@@ -254,6 +254,8 @@
     <string name="camera_sounds_summary_off">Avertissement - Désactiver Son de l\'appareil photo peut être illégal dans certains pays !</string>
 
     <!-- Slim Recent panel -->
+    <string name="recents_category_title">Applications récentes</string>
+    <string name="recents_title">Paramètrages applications récentes</string>
     <string name="slim_recents_title">Slim Recents</string>
     <string name="use_slim_recents_title">Utiliser Slim Recents</string>
     <string name="use_slim_recents_summary">Utiliser Slim Recents au lieu du gestionnaire de tâches normal</string>

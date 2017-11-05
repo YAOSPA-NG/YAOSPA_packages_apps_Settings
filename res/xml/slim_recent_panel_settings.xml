@@ -15,7 +15,17 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
         android:title="@string/slim_recents_title">
 
-        <com.android.settings.preference.SystemSettingSwitchPreference
+        <com.android.settings.preference.SecureSettingSwitchPreference
+            android:key="recents_enable_paging"
+            android:title="@string/recents_enable_paging"
+            android:summaryOn="@string/recents_enable_paging_summary_on"
+            android:summaryOff="@string/recents_enable_paging_summary_off"
+            android:defaultValue="false" />
+
+    <PreferenceCategory
+            android:title="@string/slim_recents_title">
+
+        <SwitchPreference
             android:key="use_slim_recents"
             android:title="@string/use_slim_recents_title"
             android:summary="@string/use_slim_recents_summary"
@@ -108,5 +118,6 @@
             android:summary="@string/slim_blacklist_apps_summary"
             android:dependency="use_slim_recents"
             android:persistent="false" />
+    </PreferenceCategory>
 
 </PreferenceScreen>
