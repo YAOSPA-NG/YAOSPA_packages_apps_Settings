@@ -287,6 +287,8 @@
     <string name="magisk_shortcut_title">Менеджер Magisk</string>
 
     <!-- Slim Recent panel -->
+    <string name="recents_category_title">Недавние приложения</string>
+    <string name="recents_title">Настройки недавних приложений</string>
     <string name="slim_recents_title">Недавние приложения в стиле Slim</string>
     <string name="use_slim_recents_title">Включить недавние приложения Slim</string>
     <string name="use_slim_recents_summary">Использовать недавние приложения Slim вместо стандартных</string>
