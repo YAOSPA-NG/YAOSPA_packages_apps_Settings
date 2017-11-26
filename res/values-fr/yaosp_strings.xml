@@ -318,4 +318,9 @@
     <string name="display_rotation_180_title">180 degrés</string>
     <string name="display_rotation_270_title">270 degrés</string>
 
+    <!-- Show network operator  -->
+    <string name="network_operator_display_title">Afficher opérateur réseau</string>
+    <string name="keywords_network_name_display">opérateur réseau affiché</string>
+    <string name="network_name_displayed_summary">Afficher le nom du réseau dans la barre d\'état</string>
+
 </resources>
