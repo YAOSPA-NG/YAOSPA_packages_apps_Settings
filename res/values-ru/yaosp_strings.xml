@@ -357,4 +357,9 @@
     <string name="battery_light_settings">Индикация заряда батареи</string>
     <string name="notification_light_settings">Индикация уведомлений</string>
 
+    <!-- Show network operator  -->
+    <string name="network_operator_display_title">Показывать оператора сети</string>
+    <string name="keywords_network_name_display">название сети отображено</string>
+    <string name="network_name_displayed_summary">Показывать название сети в строке состояния</string>
+
 </resources>
