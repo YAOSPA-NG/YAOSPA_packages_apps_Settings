@@ -323,4 +323,9 @@
     <string name="keywords_network_name_display">Netzwerk Betreiber angezeigt</string>
     <string name="network_name_displayed_summary">Netzwerk Namen in der Statusleiste anzeigen</string>
 
+    <!-- Alert Slider Silent Mode  -->
+    <string name="alert_slider_silent_mode_title">Slider "Nicht stören" Modus</string>
+    <string name="alert_slider_silent_mode_summary_on">Lautlos : Alles blockieren</string>
+    <string name="alert_slider_silent_mode_summary_off">Nur Wecker : Alles außer Alarm und Medien Wiedergabe blockieren</string>
+
 </resources>

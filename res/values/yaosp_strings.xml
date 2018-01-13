@@ -336,4 +336,9 @@
     <string name="display_rotation_180_title">180 degrees</string>
     <string name="display_rotation_270_title">270 degrees</string>
 
+    <!-- Alert Slider Silent Mode  -->
+    <string name="alert_slider_silent_mode_title">Slider "do not disturb" mode</string>
+    <string name="alert_slider_silent_mode_summary_on">Total silence : everything will be silenced</string>
+    <string name="alert_slider_silent_mode_summary_off">Alarms only : everything except alarms and media will be silenced</string>
+
 </resources>

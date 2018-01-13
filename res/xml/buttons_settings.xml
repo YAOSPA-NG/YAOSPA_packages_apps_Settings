@@ -41,6 +41,13 @@
         android:summary="@string/swap_slider_order_summary"
         android:persistent="false" />
 
+    <com.android.settings.preference.SystemSettingSwitchPreference
+        android:key="alert_slider_silent_mode"
+        android:title="@string/alert_slider_silent_mode_title"
+        android:summaryOn="@string/alert_slider_silent_mode_summary_on"
+        android:summaryOff="@string/alert_slider_silent_mode_summary_off"
+        android:defaultValue="false" />
+
     <SwitchPreference
         android:key="button_brightness"
         android:title="@string/hardware_brightness_keys_title"
