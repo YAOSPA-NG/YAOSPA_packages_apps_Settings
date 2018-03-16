@@ -328,4 +328,9 @@
     <string name="alert_slider_silent_mode_summary_on">Aucune interruption : bloquer tout</string>
     <string name="alert_slider_silent_mode_summary_off">Alarmes uniquement : bloquer tout sauf les alarmes et la lecture de média</string>
 
+    <!-- Volume keys always control media volume -->
+    <string name="volume_keys_control_media_stream_title">Boutons de volume contrôlent toujours les médias</string>
+    <string name="volume_keys_control_media_stream_summary_on">Boutons de volume contrôlent toujours le volume des médias</string>
+    <string name="volume_keys_control_media_stream_summary_off">Boutons de volume contrôlent le volume des sonneries/notifications/médias (défaut)</string>
+
 </resources>

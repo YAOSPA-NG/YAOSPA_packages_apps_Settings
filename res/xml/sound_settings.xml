@@ -62,6 +62,14 @@
                 android:summary="@string/swap_volume_buttons_summary"
                 android:defaultValue = "false" />
 
+        <!-- Volume keys always control media volume -->
+        <com.android.settings.preference.GlobalSettingSwitchPreference
+                android:key="volume_keys_control_media_stream"
+                android:title="@string/volume_keys_control_media_stream_title"
+                android:summaryOn="@string/volume_keys_control_media_stream_summary_on"
+                android:summaryOff="@string/volume_keys_control_media_stream_summary_off"
+                android:defaultValue = "false" />
+
         <!-- Also vibrate for calls -->
         <SwitchPreference
                 android:key="vibrate_when_ringing"

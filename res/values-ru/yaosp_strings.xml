@@ -367,4 +367,9 @@
     <string name="alert_slider_silent_mode_summary_on">Полная тишина : никаких звуков</string>
     <string name="alert_slider_silent_mode_summary_off">Только будильники : никаких звуков кроме будильника и медиа</string>
 
+    <!-- Volume keys always control media volume -->
+    <string name="volume_keys_control_media_stream_title">Кнопки громкости всегда управляют уровнем медиа</string>
+    <string name="volume_keys_control_media_stream_summary_on">Кнопки громкости всегда управляют уровнем медиа</string>
+    <string name="volume_keys_control_media_stream_summary_off">Кнопки громкости управляют уровнем звонка/уведомлений/медиа (по умолчанию)</string>
+
 </resources>

@@ -328,4 +328,9 @@
     <string name="alert_slider_silent_mode_summary_on">Lautlos : Alles blockieren</string>
     <string name="alert_slider_silent_mode_summary_off">Nur Wecker : Alles außer Alarm und Medien Wiedergabe blockieren</string>
 
+    <!-- Volume keys always control media volume -->
+    <string name="volume_keys_control_media_stream_title">Lautstärke-Tasten reglen immer Media</string>
+    <string name="volume_keys_control_media_stream_summary_on">Lautstärke-Tasten reglen immer Media Lautstärke</string>
+    <string name="volume_keys_control_media_stream_summary_off">Lautstärke-Tasten reglen Klingelton/Benachrichtigungen/Media Lautstärke (Standard)</string>
+
 </resources>

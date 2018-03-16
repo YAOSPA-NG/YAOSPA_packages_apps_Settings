@@ -341,4 +341,10 @@
     <string name="alert_slider_silent_mode_summary_on">Total silence : everything will be silenced</string>
     <string name="alert_slider_silent_mode_summary_off">Alarms only : everything except alarms and media will be silenced</string>
 
+    <!-- Volume keys always control media volume -->
+    <string name="volume_keys_control_media_stream_title">Volume rockers always control media</string>
+    <string name="volume_keys_control_media_stream_summary_on">Volume rockers always control media volume</string>
+    <string name="volume_keys_control_media_stream_summary_off">Volume rockers control ringer/notification/media volume (default)</string>
+
+
 </resources>
