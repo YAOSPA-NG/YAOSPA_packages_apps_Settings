@@ -122,8 +122,8 @@
     <string name="action_splitscreen">Splitscreen</string>
     <string name="action_screen_off">Turn off screen</string>
     <string name="action_kill_app">Kill foreground app</string>
-    <string name="action_notifications">Open notifications</string>
-    <string name="action_QS_panel">Open quicksettings panel</string>
+    <string name="action_notifications">Open/Close notifications</string>
+    <string name="action_QS_panel">Open/Close quicksettings panel</string>
 
     <!-- Screenshot shutter sound -->
     <string name="screenshot_shutter_sound_title">Screenshot shutter sound</string>
