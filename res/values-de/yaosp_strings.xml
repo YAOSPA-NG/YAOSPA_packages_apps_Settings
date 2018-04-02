@@ -140,6 +140,7 @@
     <string name="clock_color_override_title">Benutzerdefinierte Farbe verwenden</string>
     <string name="clock_color_title">Farbe</string>
     <string name="clock_color_reset">Farbe zurücksetzen</string>
+    <string name="clock_color_keyguard_title">Farbe im Sperrbildschirm</string>
     <string name="clock_style_title">Ausrichtung</string>
     <string name="clock_style_right_clock">Rechts</string>
     <string name="clock_style_center_clock">Zentriert</string>

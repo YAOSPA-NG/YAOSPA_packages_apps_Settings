@@ -80,6 +80,7 @@ public class DateTimeSettings extends SettingsPreferenceFragment
     private static final String KEY_AUTO_TIME           = "auto_time";
     private static final String KEY_AUTO_TIME_ZONE      = "auto_zone";
     private static final String KEY_CLOCK_COLOR         = "clock_color";
+    private static final String KEY_CLOCK_COLOR_KEYGUARD= "clock_color_keyguard";
     private static final String KEY_CLOCK_AM_PM_STYLE   = "clock_am_pm_style";
     private static final String KEY_CLOCK_STYLE         = "clock_style";
     private static final String KEY_CLOCK_DATE_SHOW     = "clock_date_show";
@@ -124,6 +125,7 @@ public class DateTimeSettings extends SettingsPreferenceFragment
     private Preference mTimeZone;
     private Preference mDatePref;
     private ColorPickerPreference mClockColor;
+    private ColorPickerPreference mClockColorKeyguard;
     private ListPreference mClockAmPmStyle;
     private ListPreference mClockStyle;
     private ListPreference mClockDateShow;
@@ -171,6 +173,17 @@ public class DateTimeSettings extends SettingsPreferenceFragment
             Log.e(TAG, "can't access systemui resources",e);
         }
 
+        Resources keyguardResources;
+        int defaultColorKeyguard;
+        try {
+            keyguardResources = pm.getResourcesForApplication("com.android.keyguard");
+            defaultColorKeyguard = keyguardResources.getColor(keyguardResources.getIdentifier(
+                    "com.android.keyguard:color/clock_white", null, null));
+        } catch (Exception e) {
+            defaultColorKeyguard = Color.WHITE;
+            Log.e(TAG, "can't access keyguard resources",e);
+        }
+
         // If device admin requires auto time device policy manager will set
         // Settings.Global.AUTO_TIME to true. Note that this app listens to that change.
         mAutoTimePref.setChecked(autoTimeEnabled);
@@ -202,6 +215,13 @@ public class DateTimeSettings extends SettingsPreferenceFragment
         mClockColor.setOnPreferenceChangeListener(this);
         mClockColor.setNewPreviewColor(intColor);
         updateClockColorSummary(intColor);
+
+        int intColorKeyguard = Settings.Secure.getInt(getActivity().getContentResolver(),
+                    Settings.Secure.CLOCK_COLOR_KEYGUARD, defaultColorKeyguard);
+        mClockColorKeyguard = (ColorPickerPreference) findPreference(KEY_CLOCK_COLOR_KEYGUARD);
+        mClockColorKeyguard.setOnPreferenceChangeListener(this);
+        mClockColorKeyguard.setNewPreviewColor(intColorKeyguard);
+        updateClockColorKeyguardSummary(intColorKeyguard);
 
         mClockAmPmStyle = (ListPreference) findPreference(KEY_CLOCK_AM_PM_STYLE);
         mClockAmPmStyle.setOnPreferenceChangeListener(this);
@@ -348,6 +368,14 @@ public class DateTimeSettings extends SettingsPreferenceFragment
             Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.CLOCK_COLOR, intColor);
             updateClockColorSummary(intColor);
+
+        } else if (preference == mClockColorKeyguard) {
+            String hex = ColorPickerPreference.convertToARGB(Integer.valueOf(String
+                    .valueOf(newValue)));
+            int intColorKeyguard = ColorPickerPreference.convertToColorInt(hex);
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.CLOCK_COLOR_KEYGUARD, intColorKeyguard);
+            updateClockColorKeyguardSummary(intColorKeyguard);
 
         } else if (preference == mClockAmPmStyle) {
             int val = Integer.parseInt((String) newValue);
@@ -702,6 +730,27 @@ public class DateTimeSettings extends SettingsPreferenceFragment
                 "com.android.systemui:color/status_bar_clock_color", null, null));
 
         mClockColor.setSummary(newColor == defaultColor ?
+                getResources().getString(R.string.color_default) :
+                String.format("#%08x", (0xffffffff & newColor)));
+
+    }
+
+    private void updateClockColorKeyguardSummary(int newColor) {
+
+        PackageManager pm = getPackageManager();
+        Resources keyguardResources;
+        try {
+            keyguardResources = pm.getResourcesForApplication("com.android.keyguard");
+        } catch (Exception e) {
+            mClockColorKeyguard.setSummary(String.format("#%08x", (0xffffffff & newColor)));
+            Log.e(TAG, "can't access keyguard resources",e);
+            return;
+        }
+
+        int defaultColorKeyguard = keyguardResources.getColor(keyguardResources.getIdentifier(
+                "com.android.keyguard:color/clock_white", null, null));
+
+        mClockColorKeyguard.setSummary(newColor == defaultColorKeyguard ?
                 getResources().getString(R.string.color_default) :
                 String.format("#%08x", (0xffffffff & newColor)));
 
